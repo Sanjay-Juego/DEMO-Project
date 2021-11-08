@@ -21,4 +21,6 @@ constant.EMAIL_VERIFICATION_MAX_TIME_SECONDS = 10 * 60;
 constant.CONNECTION_HANDLER_METHOD = null;
 constant.DISCONNECTION_HANDLER_METHOD = null;
 
+constant.JWT_SECRET="123"; //should be same as config
+
 module.exports = constant;

@@ -22,8 +22,8 @@
   },
   "ENCRYPTION": {
     "ENCRYPTION_MODE": "optional",
-    "ENCRYPTION_KEY": "",
-    "ENCRYPTION_IV": ""
+    "ENCRYPTION_KEY": "8VUK2RFKZUbbpXPhWYXGSvZzixsD9kec",
+    "ENCRYPTION_IV": "Jx7wyKi67LBICY1w"
   },
   "SALT_ROUNDS": 8,
   "BASE": {
@@ -32,5 +32,13 @@
     "AWS_ACCESS_KEY_ID": "",
     "AWS_SECRET_ACCESS_KEY_ID": "",
     "AWS_ROLE_ARN": ""
+  },
+  "SQL": {
+    "DATABASE_TYPE": "mysql",
+    "SQL_DB_HOST": "localhost",
+    "SQL_DB_NAME": "njs2-demo-database",
+    "SQL_DB_PORT": 3306,
+    "SQL_DB_USER": "root",
+    "SQL_DB_PASSWORD": "password"
   }
 }
