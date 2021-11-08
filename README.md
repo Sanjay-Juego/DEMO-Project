@@ -1,2 +1,2 @@
 # DEMO-Project
-Demo project
+Demo project of NJS2 Framework.
