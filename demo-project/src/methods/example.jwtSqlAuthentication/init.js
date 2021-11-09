@@ -1,10 +1,10 @@
 
-class ExampleJwtAuthenticationInitalize extends baseInitialize {
+class ExampleJwtSqlAuthenticationInitalize extends baseInitialize {
 
   constructor() {
     super();
     this.pkgInitializer =  {};
-    this.pkgInitializer.isSecured = true; // values: true/false
+    this.pkgInitializer.isSecured = false; // values: true/false
     this.pkgInitializer.requestMethod = ['GET']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
@@ -15,4 +15,4 @@ class ExampleJwtAuthenticationInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleJwtAuthenticationInitalize;
+module.exports = ExampleJwtSqlAuthenticationInitalize;

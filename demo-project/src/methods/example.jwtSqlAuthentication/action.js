@@ -1,13 +1,13 @@
 const jwt = require('jsonwebtoken') //external package for create access_token
 const { v4 } = require('uuid') //external npm package for create random user_id
-
-class ExampleJwtAuthenticationAction extends baseAction {
+class ExampleJwtSqlAuthenticationAction extends baseAction {
 
   async executeMethod() {
     //NOTE: Before trying this, make sure that you have tried SQL-CRUD (example/sqlCrud).
     //NOTE: for this AUTH_MODE should be set to JWT in config.
     //NOTE: In init.js , this.pkgInitializer.isSecured should be set to true in order to use JwtAuthentication.
-    //NOTE: JWT won't check whether access_token stored in Database or not. For Checking access_token in database, you have to try JWT_SQL.
+    //NOTE: JWT won't check whether access_token stored in Database or not. 
+    //NOTE: For Checking access_token in database, you have to try JWT_SQL.
 
     //In Following example JWT decrypts the access_token and returns userObj, which includes field which is specified in JWT_ID _KEY.
 
@@ -36,7 +36,8 @@ class ExampleJwtAuthenticationAction extends baseAction {
     }
 
 
+
   };
 
 }
-module.exports = ExampleJwtAuthenticationAction;
+module.exports = ExampleJwtSqlAuthenticationAction;

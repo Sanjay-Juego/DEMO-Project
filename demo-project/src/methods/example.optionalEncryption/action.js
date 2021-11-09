@@ -2,7 +2,8 @@
 class ExampleOptionalEncryptionAction extends baseAction {
 
   async executeMethod() {
-    //NOTE: For this endpoint ENCRYPTION_MODE is set to optional in config.json. It means that the endpoint will work in both cases (enc_state=1 or 0).
+    //NOTE: For this endpoint ENCRYPTION_MODE is set to optional in config.json. 
+    //It means that the endpoint will work in both cases (enc_state=1 or 0).
     let { name } = this;
     
     this.setResponse('SUCCESS');
