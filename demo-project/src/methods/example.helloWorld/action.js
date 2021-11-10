@@ -1,11 +1,18 @@
-
 class ExampleHelloWorldAction extends baseAction {
-
   async executeMethod() {
-    //You can set other response types as well.For custom response, you have to deifine it in global/i18n/response.js
-    this.setResponse('SUCCESS');  
-    return "Hellow World!..";
-  };
+    /*
+    HELLO WORLD EXAMPLE
 
+    Steps:
+    1. To test this example, please run the following command in the terminal:
+      njs2 run express
+    2. Then open the browser and visit the following url:
+      http://localhost:3000/example/helloWorld
+    3. Ctrl+c to stop the server.
+    */
+
+    this.setResponse("SUCCESS");
+    return "Hello World!..";
+  }
 }
 module.exports = ExampleHelloWorldAction;

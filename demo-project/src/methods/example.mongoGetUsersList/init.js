@@ -1,5 +1,5 @@
 
-class ExampleJwtSqlAuthenticationInitalize extends baseInitialize {
+class ExampleMongoGetUsersListInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -15,4 +15,4 @@ class ExampleJwtSqlAuthenticationInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleJwtSqlAuthenticationInitalize;
+module.exports = ExampleMongoGetUsersListInitalize;

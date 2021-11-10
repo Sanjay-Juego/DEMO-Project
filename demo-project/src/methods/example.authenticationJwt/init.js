@@ -1,5 +1,5 @@
 
-class ExampleJwt_sqlAuthenticationInitalize extends baseInitialize {
+class ExampleAuthenticationJwtInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -15,4 +15,4 @@ class ExampleJwt_sqlAuthenticationInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleJwt_sqlAuthenticationInitalize;
+module.exports = ExampleAuthenticationJwtInitalize;

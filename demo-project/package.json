@@ -24,6 +24,8 @@
   },
   "dependencies": {
     "@njs2/base": "git+https://github.com/Njs2/njs2-base.git#0-0-1",
+    "@njs2/mongo": "git+https://github.com/Sanjay-Juego/MYMONGO.git",
+    "@njs2/redis": "git+https://github.com/Sanjay-Juego/MYREDIS.git",
     "@njs2/sql": "^1.0.5",
     "jsonwebtoken": "^8.5.1",
     "uuid": "^8.3.2"

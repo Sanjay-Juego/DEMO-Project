@@ -1,5 +1,5 @@
 
-class ExampleOptionalEncryptionInitalize extends baseInitialize {
+class ExampleEncryptionStrictInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -11,7 +11,7 @@ class ExampleOptionalEncryptionInitalize extends baseInitialize {
   getParameter() {
     const param = {
       "name": {
-        "name": "user_name",
+        "name": "name",
         "type": "string",
         "description": "name of user sent in GET request from Client/Browser side",
         "required": true,
@@ -23,4 +23,4 @@ class ExampleOptionalEncryptionInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleOptionalEncryptionInitalize;
+module.exports = ExampleEncryptionStrictInitalize;
