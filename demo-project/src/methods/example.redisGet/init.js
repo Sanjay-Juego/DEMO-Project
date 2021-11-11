@@ -1,5 +1,5 @@
 
-class ExampleEncryptionStrictInitalize extends baseInitialize {
+class ExampleRedisGetInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -10,12 +10,12 @@ class ExampleEncryptionStrictInitalize extends baseInitialize {
 
   getParameter() {
     const param = {
-      "name": {
-        "name": "name",
-        "type": "string",
-        "description": "name of user sent in GET request from Client/Browser side",
+      "user_id": {
+        "name": "user_id",
+        "type": "number",
+        "description": "id for cache",
         "required": true,
-        "default": "unknown user"
+        "default": "1"
       },
     };
 
@@ -23,4 +23,4 @@ class ExampleEncryptionStrictInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleEncryptionStrictInitalize;
+module.exports = ExampleRedisGetInitalize;

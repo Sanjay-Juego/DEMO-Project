@@ -1,5 +1,5 @@
 
-class ExampleEncryptionStrictInitalize extends baseInitialize {
+class ExampleSocketApiGatewayInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -10,12 +10,12 @@ class ExampleEncryptionStrictInitalize extends baseInitialize {
 
   getParameter() {
     const param = {
-      "name": {
-        "name": "name",
+      "inpVals": {
+        "name": "inp_vals",
         "type": "string",
-        "description": "name of user sent in GET request from Client/Browser side",
-        "required": true,
-        "default": "unknown user"
+        "description": "inp_vals",
+        "required": false,
+        "default": ""
       },
     };
 
@@ -23,4 +23,4 @@ class ExampleEncryptionStrictInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleEncryptionStrictInitalize;
+module.exports = ExampleSocketApiGatewayInitalize;

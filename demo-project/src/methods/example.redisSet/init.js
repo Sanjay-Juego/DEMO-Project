@@ -1,5 +1,5 @@
 
-class ExampleMongoCreateUserInitalize extends baseInitialize {
+class ExampleRedisSetInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -13,16 +13,9 @@ class ExampleMongoCreateUserInitalize extends baseInitialize {
       "user_id": {
         "name": "user_id",
         "type": "number",
-        "description": "user id",
+        "description": "id for cache",
         "required": true,
         "default": "1"
-      },
-      "user_name": {
-        "name": "user_name",
-        "type": "string",
-        "description": "user name",
-        "required": true,
-        "default": "user123"
       },
     };
 
@@ -30,4 +23,4 @@ class ExampleMongoCreateUserInitalize extends baseInitialize {
   }
 }
 
-module.exports = ExampleMongoCreateUserInitalize;
+module.exports = ExampleRedisSetInitalize;

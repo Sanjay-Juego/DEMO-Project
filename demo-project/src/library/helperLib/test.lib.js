@@ -1,6 +1,6 @@
 class testLib {
   testFunction() {
-    console.log('testFunction');
+    console.log('testFunction in helper');
   }
 }
 

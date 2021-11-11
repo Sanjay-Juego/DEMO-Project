@@ -3,7 +3,7 @@ class ExampleMongoDeleteUserInitalize extends baseInitialize {
     super();
     this.pkgInitializer = {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ["POST"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ["DELETE"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {
@@ -13,7 +13,7 @@ class ExampleMongoDeleteUserInitalize extends baseInitialize {
         type: "number",
         description: "user id",
         required: true,
-        default: "",
+        default: "1",
       },
     };
 

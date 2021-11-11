@@ -6,17 +6,23 @@ class ExampleSqlCreateUserAction extends baseAction {
     Prerequisites:
     1. Make sure that you have mysql installed on your machine. 
     2. Install @njs2-sql package using npm (npm i @njs2/sql).
-    3. Make sure that you have provided the correct SQL_DB_USER and SQL_DB_PASSWORD details to connect the database in config/config.json.
+    3. Configuration to sql connection can be found in config/config.json file.
     4. Create a database named 'njs2-demo-database' in your mysql.
-    5. In njs2-demo-database database, create a table named 'user' with following columns:
+    5. In njs2-demo-database database, create a table named 'user' with following columns
         user_id (int)
         user_name (varchar)
         gender (varchar)
+    SQL QUERY:  CREATE TABLE `user` (
+                  `user_id` int(11) NOT NULL,
+                  `user_name` varchar(200) NOT NULL,
+                  `gender` varchar(200) NOT NULL,
+                  PRIMARY KEY (`user_id`)
+
 
     Steps:
     1. To understand userLib, read sqlLib/user.lib.js
     2. Run "njs2 run" command in terminal.
-    3. Pass following arguments from Browser/Postman:
+    3. Pass following arguments from Postman under body section:
       * user_id
       * user_name
       * gender
@@ -36,7 +42,7 @@ class ExampleSqlCreateUserAction extends baseAction {
     await userLib.create(new_user);
 
     this.setResponse("SUCCESS");
-    return {new_user};
+    return { new_user };
   }
 }
 module.exports = ExampleSqlCreateUserAction;

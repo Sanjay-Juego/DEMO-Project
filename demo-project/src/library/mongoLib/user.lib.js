@@ -20,7 +20,7 @@ class userLib {
     }
   }
 
-  async updateUser(query, data,options = {}) {
+  async updateUser(query, data, options = {}) {
     try {
       let userModel = await initUserModel();
       return await userModel.findOneAndUpdate(query, data, options);
@@ -33,15 +33,6 @@ class userLib {
     try {
       let userModel = await initUserModel();
       return await userModel.findOneAndDelete(query);
-    } catch (e) {
-      console.log(e);
-    }
-  }
-
-  async getAllUsers(query, options = []) {
-    try {
-      let userModel = await initUserModel();
-      return await userModel.find(query).lean();
     } catch (e) {
       console.log(e);
     }

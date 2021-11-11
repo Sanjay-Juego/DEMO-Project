@@ -8,19 +8,19 @@ class ExamplePostmanInitalize extends baseInitialize {
 
   getParameter() {
     const param = {
-      argument1: {
-        name: "argument1",
+      x: {
+        name: "x",
         type: "number",
         description: "First argument",
         required: false,
-        default: "10", //if argument1 is not passed, this value will be used
+        default: "10", //if x is not passed, this value will be used
       },
-      argument2: {
-        name: "argument2",
+      y: {
+        name: "y",
         type: "string",
         description: "Second argument",
-        required: true, //if argument2 is not passed, this  will throw an error as argument2 should not be empty
-        default: "",
+        required: true, //if y is not passed, this  will throw an error as argument2 should not be empty
+        default: "hai",
       },
     };
 

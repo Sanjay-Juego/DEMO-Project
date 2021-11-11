@@ -5,7 +5,7 @@ class ExampleMongoUpdateUserDetailsInitalize extends baseInitialize {
     super();
     this.pkgInitializer =  {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ['POST']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ['PUT']; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {
@@ -15,14 +15,14 @@ class ExampleMongoUpdateUserDetailsInitalize extends baseInitialize {
         "type": "number",
         "description": "user id",
         "required": true,
-        "default": ""
+        "default": "1"
       },
       "updated_user_name": {
         "name": "updated_user_name",
         "type": "string",
         "description": "user name going to update",
         "required": true,
-        "default": ""
+        "default": "updated_user123"
       },
     };
 

@@ -13,7 +13,6 @@ class ExampleMongoUpdateUserDetailsAction extends baseAction {
     2. Read the file library/mongoLib/user.lib.js to create custom queries on user model.
     3. Run the project from the command line: njs2 run express;
     4. After importing collection in postman, go to: example/mongoUpdateUserDetails.
-    5. Couse this is POST API, pass the parameter from the request body.
     6. After getting response, check your mongodb database to see if the user is updated.
     */
 

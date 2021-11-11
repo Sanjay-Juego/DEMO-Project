@@ -13,7 +13,7 @@ class ExampleMongoGetUserDetailsInitalize extends baseInitialize {
         type: "number",
         description: "user id",
         required: true,
-        default: "",
+        default: "1",
       },
     };
 

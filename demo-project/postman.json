@@ -37,15 +37,15 @@
           ],
           "query": [
             {
-              "key": "argument1",
+              "key": "x",
               "value": "10",
               "disabled": true,
               "description": "First argument",
               "type": "text"
             },
             {
-              "key": "argument2",
-              "value": "",
+              "key": "y",
+              "value": "hai",
               "disabled": false,
               "description": "Second argument",
               "type": "text"
@@ -190,7 +190,7 @@
           "query": [
             {
               "key": "name",
-              "value": "",
+              "value": "unknown user",
               "disabled": false,
               "description": "name of user sent in GET request from Client/Browser side",
               "type": "text"
@@ -239,7 +239,7 @@
           "query": [
             {
               "key": "name",
-              "value": "",
+              "value": "unknown user",
               "disabled": false,
               "description": "name of user sent in GET request from Client/Browser side",
               "type": "text"
@@ -333,14 +333,14 @@
           "urlencoded": [
             {
               "key": "user_id",
-              "value": "",
+              "value": "1",
               "disabled": false,
               "description": "user id",
               "type": "text"
             },
             {
               "key": "user_name",
-              "value": "",
+              "value": "user123",
               "disabled": false,
               "description": "user name",
               "type": "text"
@@ -360,7 +360,7 @@
     {
       "name": "example/mongoDeleteUser",
       "request": {
-        "method": "POST",
+        "method": "DELETE",
         "header": [
           {
             "key": "enc_state",
@@ -385,25 +385,6 @@
           "path": [
             "example",
             "mongoDeleteUser"
-          ]
-        },
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "user_id",
-              "value": "",
-              "disabled": false,
-              "description": "user id",
-              "type": "text"
-            },
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
           ]
         }
       },
@@ -441,7 +422,7 @@
           "query": [
             {
               "key": "user_id",
-              "value": "",
+              "value": "1",
               "disabled": false,
               "description": "user id",
               "type": "text"
@@ -459,51 +440,9 @@
       "response": []
     },
     {
-      "name": "example/mongoGetUsersList",
-      "request": {
-        "method": "GET",
-        "header": [
-          {
-            "key": "enc_state",
-            "value": "1",
-            "disabled": true,
-            "description": "Encryption status: 1- Enable, 2- Disable",
-            "type": "text"
-          },
-          {
-            "key": "lng_key",
-            "value": "en",
-            "disabled": true,
-            "description": "Langauage key",
-            "type": "text"
-          }
-        ],
-        "url": {
-          "raw": "http://localhost:3000/example/mongoGetUsersList",
-          "host": [
-            "http://localhost:3000"
-          ],
-          "path": [
-            "example",
-            "mongoGetUsersList"
-          ],
-          "query": [
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
-          ]
-        }
-      },
-      "response": []
-    },
-    {
       "name": "example/mongoUpdateUserDetails",
       "request": {
-        "method": "POST",
+        "method": "PUT",
         "header": [
           {
             "key": "enc_state",
@@ -528,32 +467,6 @@
           "path": [
             "example",
             "mongoUpdateUserDetails"
-          ]
-        },
-        "body": {
-          "mode": "urlencoded",
-          "urlencoded": [
-            {
-              "key": "user_id",
-              "value": "",
-              "disabled": false,
-              "description": "user id",
-              "type": "text"
-            },
-            {
-              "key": "_updated_user_name",
-              "value": "",
-              "disabled": false,
-              "description": "user name going to update",
-              "type": "text"
-            },
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
           ]
         }
       },
@@ -590,15 +503,15 @@
           ],
           "query": [
             {
-              "key": "argument1",
+              "key": "x",
               "value": "10",
               "disabled": true,
               "description": "First argument",
               "type": "text"
             },
             {
-              "key": "argument2",
-              "value": "",
+              "key": "y",
+              "value": "hai",
               "disabled": false,
               "description": "Second argument",
               "type": "text"
@@ -616,9 +529,339 @@
       "response": []
     },
     {
-      "name": "example/sqlCreateUser",
+      "name": "example/redisDelete",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/redisDelete",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "redisDelete"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/redisGet",
       "request": {
         "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/redisGet",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "redisGet"
+          ],
+          "query": [
+            {
+              "key": "user_id",
+              "value": "1",
+              "disabled": false,
+              "description": "id for cache",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/redisSet",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/redisSet",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "redisSet"
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "user_id",
+              "value": "1",
+              "disabled": false,
+              "description": "id for cache",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/socketApiGateway",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/socketApiGateway",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "socketApiGateway"
+          ],
+          "query": [
+            {
+              "key": "inp_vals",
+              "value": "",
+              "disabled": true,
+              "description": "inp_vals",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/socketConnect",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/socketConnect",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "socketConnect"
+          ],
+          "query": [
+            {
+              "key": "socket_id",
+              "value": "",
+              "disabled": false,
+              "description": "socketId",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/socketDisconnect",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/socketDisconnect",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "socketDisconnect"
+          ],
+          "query": [
+            {
+              "key": "socket_id",
+              "value": "",
+              "disabled": false,
+              "description": "socketId",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/socketSocketIO",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "enc_state",
+            "value": "1",
+            "disabled": true,
+            "description": "Encryption status: 1- Enable, 2- Disable",
+            "type": "text"
+          },
+          {
+            "key": "lng_key",
+            "value": "en",
+            "disabled": true,
+            "description": "Langauage key",
+            "type": "text"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/example/socketSocketIO",
+          "host": [
+            "http://localhost:3000"
+          ],
+          "path": [
+            "example",
+            "socketSocketIO"
+          ],
+          "query": [
+            {
+              "key": "inp_vals",
+              "value": "",
+              "disabled": true,
+              "description": "inp_vals",
+              "type": "text"
+            },
+            {
+              "key": "data",
+              "value": "",
+              "disabled": true,
+              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
+              "type": "text"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "example/sqlCreateUser",
+      "request": {
+        "method": "POST",
         "header": [
           {
             "key": "enc_state",
@@ -643,8 +886,11 @@
           "path": [
             "example",
             "sqlCreateUser"
-          ],
-          "query": [
+          ]
+        },
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
             {
               "key": "user_id",
               "value": "1",
@@ -681,7 +927,7 @@
     {
       "name": "example/sqlDeleteUser",
       "request": {
-        "method": "GET",
+        "method": "DELETE",
         "header": [
           {
             "key": "enc_state",
@@ -706,22 +952,6 @@
           "path": [
             "example",
             "sqlDeleteUser"
-          ],
-          "query": [
-            {
-              "key": "user_id",
-              "value": "1",
-              "disabled": false,
-              "description": "user id",
-              "type": "text"
-            },
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
           ]
         }
       },
@@ -779,7 +1009,7 @@
     {
       "name": "example/sqlUpdateUser",
       "request": {
-        "method": "GET",
+        "method": "PUT",
         "header": [
           {
             "key": "enc_state",
@@ -804,36 +1034,6 @@
           "path": [
             "example",
             "sqlUpdateUser"
-          ],
-          "query": [
-            {
-              "key": "user_id",
-              "value": "1",
-              "disabled": false,
-              "description": "user id",
-              "type": "text"
-            },
-            {
-              "key": "user_name",
-              "value": "unknown user",
-              "disabled": false,
-              "description": "user name",
-              "type": "text"
-            },
-            {
-              "key": "gender",
-              "value": "male",
-              "disabled": false,
-              "description": "user gender",
-              "type": "text"
-            },
-            {
-              "key": "data",
-              "value": "",
-              "disabled": true,
-              "description": "Encrypted data and url encode(URLSearchParams) the encrypted data to handle special characters",
-              "type": "text"
-            }
           ]
         }
       },

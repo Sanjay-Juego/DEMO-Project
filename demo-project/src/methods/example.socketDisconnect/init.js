@@ -1,5 +1,5 @@
 
-class ExampleEncryptionStrictInitalize extends baseInitialize {
+class ExampleSocketDisconnectInitalize extends baseInitialize {
 
   constructor() {
     super();
@@ -10,17 +10,17 @@ class ExampleEncryptionStrictInitalize extends baseInitialize {
 
   getParameter() {
     const param = {
-      "name": {
-        "name": "name",
+      "socket_id": {
+        "name": "socket_id",
         "type": "string",
-        "description": "name of user sent in GET request from Client/Browser side",
+        "description": "socketId",
         "required": true,
-        "default": "unknown user"
-      },
+        "default": ""
+      }
     };
 
     return { ...param };
   }
 }
 
-module.exports = ExampleEncryptionStrictInitalize;
+module.exports = ExampleSocketDisconnectInitalize;

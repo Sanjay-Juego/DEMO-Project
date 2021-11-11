@@ -3,7 +3,7 @@ class ExampleSqlDeleteUserInitalize extends baseInitialize {
     super();
     this.pkgInitializer = {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ["GET"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ["DELETE"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {

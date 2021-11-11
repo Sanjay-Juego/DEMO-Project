@@ -3,7 +3,7 @@ class ExampleSqlUpdateUserInitalize extends baseInitialize {
     super();
     this.pkgInitializer = {};
     this.pkgInitializer.isSecured = false; // values: true/false
-    this.pkgInitializer.requestMethod = ["GET"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
+    this.pkgInitializer.requestMethod = ["PUT"]; // requestMethod: ['GET', 'POST', 'PUT', 'DELETE']
   }
 
   getParameter() {
@@ -20,7 +20,7 @@ class ExampleSqlUpdateUserInitalize extends baseInitialize {
         type: "string",
         description: "user name",
         required: true,
-        default: "unknown user",
+        default: "user123",
       },
       gender: {
         name: "gender",

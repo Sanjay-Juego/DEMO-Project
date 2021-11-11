@@ -18,9 +18,9 @@ constant.PENDING = 6;
 
 constant.EMAIL_VERIFICATION_MAX_TIME_SECONDS = 10 * 60;
 
-constant.CONNECTION_HANDLER_METHOD = null;
-constant.DISCONNECTION_HANDLER_METHOD = null;
+constant.CONNECTION_HANDLER_METHOD = "example/socketConnect";
+constant.DISCONNECTION_HANDLER_METHOD = "example/socketDisconnect";
 
-constant.JWT_SECRET="123"; //should be same as config
+constant.SOCKET_ID_ARRAY=[]
 
 module.exports = constant;

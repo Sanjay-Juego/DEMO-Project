@@ -15,7 +15,7 @@ class ExampleEncryptionOptionalInitalize extends baseInitialize {
         "type": "string",
         "description": "name of user sent in GET request from Client/Browser side",
         "required": true,
-        "default": ""
+        "default": "unknown user"
       },
     };
 
